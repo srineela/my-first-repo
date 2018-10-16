@@ -10,8 +10,7 @@ test:
   message: hello
 management: 
   security: 
-    enabled: false
-management: 
+    enabled: false 
   endpoints: 
     web: 
       exposure:
