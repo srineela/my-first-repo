@@ -1,30 +1,5 @@
 server:
   port: 8084
-spring: 
- cloud:
-    gateway:
-      discovery:
-        locator:
-          enabled: true
-      routes:
-        - id: event-service
-          uri: lb://event-service
-          predicates:
-            - Path=/event/**
-          filters:
-          - name: Hystrix
-            args: 
-             name: fallbackcmd 
-             fallbackUri: forward:/fallback
-          - RewritePath=/event/(?<path>.*), /$\{path}
-        - id: user-service
-          uri: lb://user-service
-          predicates:
-            - Path=/user/**
-          filters:
-          - RewritePath=/user/(?<path>.*), /$\{path}    
-auth-service: 
-  path: http://localhost:8083
 eureka:
   instance:
     hostname: localhost
