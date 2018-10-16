@@ -1,0 +1,8 @@
+security:
+  jwt:
+    secret: JwtSecretKey
+logging:
+  level:
+    org:
+      springframework:
+        web: DEBUG
