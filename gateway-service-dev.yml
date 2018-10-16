@@ -8,3 +8,19 @@ eureka:
       defaultZone: http://${eureka.instance.hostname}:8083/eureka/
 test: 
   message: hello
+management: 
+  security: 
+    enabled: false
+management: 
+  endpoints: 
+    web: 
+      exposure:
+        include: *
+
+
+spring:
+  rabbitmq: 
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
