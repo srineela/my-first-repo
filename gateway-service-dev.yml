@@ -15,11 +15,10 @@ management:
     web: 
       exposure:
         include: "*"
-
-
 spring:
-  rabbitmq: 
-    host: localhost
-    port: 5672
-    username: guest
-    password: guest
+  cloud:
+    stream:
+      kafka:
+        binder:
+          zkNodes: "localhost:2181"
+          brokers: "localhost:9092"
