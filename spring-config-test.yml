@@ -1,5 +1,5 @@
 text: 
-  greeting: Hello spring config test updated
+  greeting: Hello spring config test
 management: 
   security: 
     enabled: false
